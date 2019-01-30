@@ -2,26 +2,59 @@ package example
 
 import scala.io.StdIn._
 
-// ABC 087 B - Coins
 object Main extends App {
   val nums: Array[Int] = readLine().split(" ").map(_.toInt)
-  val A: Int = nums(0)
-  val B: Int = nums(1)
-  val C: Int = nums(2)
-  val X: Int = readInt()
-
-  var res: Int = 0
-  for (a <- 0 to A) {
-    for (b <- 0 to B) {
-      for (c <- 0 to C) {
-        if ((500 * a + 100 * b + 50 * c) == X) {
-          res += 1
-        }
-      }
-    }
+  val sum: Int = nums(0) + nums(1)
+  if (sum % 2 == 0) {
+    println(sum / 2)
+  } else {
+    println(sum / 2 + 1)
   }
-  println(res)
 }
+
+// ABC 088 A - Infinite Coins
+//object Main extends App {
+//  val N: Int = readInt()
+//  val A: Int = readInt()
+//
+//  val div : Int = N / 500
+//  if ((N - 500 * div) > 1 * A) {
+//    println("No")
+//  } else {
+//    println("Yes")
+//  }
+//}
+
+// A - RGB Cards
+//object Main extends App {
+//  val num: Int = readLine().replace(" ", "").toInt
+//  if (num % 4 == 0) {˚
+//    println("YES")
+//  } else {
+//    println("NO")
+//  }
+//}
+
+// ABC 087 B - Coins
+//object Main extends App {
+//  val nums: Array[Int] = readLine().split(" ").map(_.toInt)
+//  val A: Int = nums(0)
+//  val B: Int = nums(1)
+//  val C: Int = nums(2)
+//  val X: Int = readInt()
+//
+//  var res: Int = 0
+//  for (a <- 0 to A) {
+//    for (b <- 0 to B) {
+//      for (c <- 0 to C) {
+//        if ((500 * a + 100 * b + 50 * c) == X) {
+//          res += 1
+//        }
+//      }
+//    }
+//  }
+//  println(res)
+//}
 
 // ABC 081 B - Shift Only
 //object Hello extends App {
